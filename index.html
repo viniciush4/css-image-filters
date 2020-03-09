@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>CSS Image Filters</h1>
+        <img 
+            id="img"
+            style="width: 500px;"
+            src="https://www.elindependiente.com/wp-content/uploads/2019/08/Depositphotos_8156139_l-2015-min-1440x808.jpg" 
+        />
+        <p>
+            blur: 
+            <input type="range" value="0" min="0" max="25" id="input-blur" oninput="blurFilter()">
+        </p>
+
+        <p>
+            brightness: 
+            <input type="range" value="100" min="0" max="200" id="input-brightness" oninput="brightnessFilter()">
+        </p>
+
+        <script>
+            var filters = {
+                blur: '',
+                brightness: ''
+            }
+
+            function blurFilter() {
+                let value = document.getElementById("input-blur").value
+                filters.blur = `blur(${value}px)`
+                apply()
+            }
+
+            function brightnessFilter() {
+                let value = document.getElementById("input-brightness").value
+                filters.brightness = `brightness(${value}%)`
+                apply()
+            }
+
+
+            function apply() {
+                
+                let img = document.getElementById("img")
+                let filtersString = ''
+                for (e in filters) {
+                    filtersString += ` ${filters[e]}`
+                }
+                console.log(filtersString)
+                Object.assign(document.querySelector('#img').style, {
+                    filter: filtersString
+                })
+            }
+            </script>
+    </body>
+</html>
