@@ -1,0 +1,61 @@
+html, body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+header {
+    grid-area: h;
+}
+
+main {
+    background-color: blue;
+    grid-area: m;
+}
+
+aside {
+    grid-area: a;
+}
+
+footer {
+    background-color: red;
+    grid-area: f;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 60vh 10vh 10vh;
+    grid-gap: 0px;
+    grid-template-areas: "h" 
+                         "a"
+                         "m"
+                         "f";
+}
+
+.grid {
+    display: grid;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-self: center;
+}
+
+.align-center {
+    align-self: center;
+}
+
+.font-pacifico {
+    font-family: 'Pacifico', cursive;
+    font-weight: lighter;
+    font-size: 48px;
+}

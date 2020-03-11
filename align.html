@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-color: #7159c1;
+        }
+
+        .container {
+            display: grid;
+            width:100vw;
+            height: 100vh;
+            grid-gap: 10px;
+            background-color: black;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            
+            justify-content: space-between;
+            align-content: space-between;
+            
+            justify-items: center;
+            align-items: center;
+        
+        }
+
+        .container > div {
+            background-color: violet;
+            width: 50%;
+            height: 50%;
+        }
+
+        #diferentao {
+            justify-self: end;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id=diferentao></div>
+    </div>
+</body>
+</html>

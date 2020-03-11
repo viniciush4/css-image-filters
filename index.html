@@ -1,139 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
     <body>
-        <h1>CSS Image Filters</h1>
-        <img 
-            id="img"
-            style="width: 500px;"
-            src="limao.png" 
-        />
-        <p>
-            blur: 
-            <input type="range" value="0" min="0" max="25" id="input-blur" oninput="blurFilter()">
-        </p>
-        <p>
-            brightness: 
-            <input type="range" value="100" min="0" max="200" id="input-brightness" oninput="brightnessFilter()">
-        </p>
-        <p>
-            contrast: 
-            <input type="range" value="100" min="0" max="200" id="input-contrast" oninput="contrastFilter()">
-        </p>
-        <p>
-            grayscale: 
-            <input type="range" value="0" min="0" max="100" id="input-grayscale" oninput="grayscaleFilter()">
-        </p>
-        <p>
-            invert: 
-            <input type="range" value="0" min="0" max="100" id="input-invert" oninput="invertFilter()">
-        </p>
-        <p>
-            opacity: 
-            <input type="range" value="100" min="0" max="100" id="input-opacity" oninput="opacityFilter()">
-        </p>
-        <p>
-            saturate: 
-            <input type="range" value="100" min="0" max="200" id="input-saturate" oninput="saturateFilter()">
-        </p>
-        <p>
-            sepia: 
-            <input type="range" value="0" min="0" max="100" id="input-sepia" oninput="sepiaFilter()">
-        </p>
-        <p>
-            hue-rotate: 
-            <input type="range" value="0" min="0" max="360" id="input-hue-rotate" oninput="hueRotateFilter()">
-        </p>
-        <p>
-            drop-shadow: 
-            x: 
-            <input type="range" value="0" min="-50" max="50" id="input-drop-shadow-x" oninput="dropShadowFilter()">
-            y: 
-            <input type="range" value="0" min="-50" max="50" id="input-drop-shadow-y" oninput="dropShadowFilter()">
-            radius-blur: 
-            <input type="range" value="0" min="0" max="50" id="input-drop-shadow-r" oninput="dropShadowFilter()">
-            color: 
-            <input type="color" value="#000000" id="input-drop-shadow-c" oninput="dropShadowFilter()">
-        </p>
+        <div class="container">
+            <header class="grid">
+                <h1 class="justify-center align-center font-pacifico">CSS Image Filters</h1>
+            </header>
+            <aside class="grid">
+                <img 
+                    id="img"
+                    style="width: 500px;"
+                    class="justify-center align-center"
+                    src="assets/limao.png" 
+                />
+            </aside>
+            <main class="flex overflow-hidden">
+                <p>
+                    blur: 
+                    <input type="range" value="0" min="0" max="25" id="input-blur" oninput="blurFilter()">
+                </p>
+                <p>
+                    brightness: 
+                    <input type="range" value="100" min="0" max="200" id="input-brightness" oninput="brightnessFilter()">
+                </p>
+                <p>
+                    contrast: 
+                    <input type="range" value="100" min="0" max="200" id="input-contrast" oninput="contrastFilter()">
+                </p>
+                <p>
+                    grayscale: 
+                    <input type="range" value="0" min="0" max="100" id="input-grayscale" oninput="grayscaleFilter()">
+                </p>
+                <p>
+                    invert: 
+                    <input type="range" value="0" min="0" max="100" id="input-invert" oninput="invertFilter()">
+                </p>
+                <p>
+                    opacity: 
+                    <input type="range" value="100" min="0" max="100" id="input-opacity" oninput="opacityFilter()">
+                </p>
+                <p>
+                    saturate: 
+                    <input type="range" value="100" min="0" max="200" id="input-saturate" oninput="saturateFilter()">
+                </p>
+                <p>
+                    sepia: 
+                    <input type="range" value="0" min="0" max="100" id="input-sepia" oninput="sepiaFilter()">
+                </p>
+                <p>
+                    hue-rotate: 
+                    <input type="range" value="0" min="0" max="360" id="input-hue-rotate" oninput="hueRotateFilter()">
+                </p>
+                <p>
+                    drop-shadow: 
+                    x: 
+                    <input type="range" value="0" min="-50" max="50" id="input-drop-shadow-x" oninput="dropShadowFilter()">
+                    y: 
+                    <input type="range" value="0" min="-50" max="50" id="input-drop-shadow-y" oninput="dropShadowFilter()">
+                    radius-blur: 
+                    <input type="range" value="0" min="0" max="50" id="input-drop-shadow-r" oninput="dropShadowFilter()">
+                    color: 
+                    <input type="color" value="#000000" id="input-drop-shadow-c" oninput="dropShadowFilter()">
+                </p>
+            </main>
+            <footer class="grid">
+                <span class="justify-center align-center">Vinícius Berger</span>
+            </footer>
+        </div>
 
-        <script>
-            var filters = {}
+        <script src="assets/script.js"></script>
 
-            function blurFilter() {
-                let value = document.getElementById("input-blur").value
-                filters.blur = `blur(${value}px)`
-                apply()
-            }
-
-            function brightnessFilter() {
-                let value = document.getElementById("input-brightness").value
-                filters.brightness = `brightness(${value}%)`
-                apply()
-            }
-
-            function contrastFilter() {
-                let value = document.getElementById("input-contrast").value
-                filters.contrast = `contrast(${value}%)`
-                apply()
-            }
-            
-            function grayscaleFilter() {
-                let value = document.getElementById("input-grayscale").value
-                filters.grayscale = `grayscale(${value}%)`
-                apply()
-            }
-
-            function invertFilter() {
-                let value = document.getElementById("input-invert").value
-                filters.invert = `invert(${value}%)`
-                apply()
-            }
-
-            function opacityFilter() {
-                let value = document.getElementById("input-opacity").value
-                filters.opacity = `opacity(${value}%)`
-                apply()
-            }
-
-            function saturateFilter() {
-                let value = document.getElementById("input-saturate").value
-                filters.saturate = `saturate(${value}%)`
-                apply()
-            }
-
-            function sepiaFilter() {
-                let value = document.getElementById("input-sepia").value
-                filters.sepia = `sepia(${value}%)`
-                apply()
-            }
-
-            function hueRotateFilter() {
-                let value = document.getElementById("input-hue-rotate").value
-                filters.hueRotate = `hue-rotate(${value}deg)`
-                apply()
-            }
-
-            function dropShadowFilter() {
-                let valueX = document.getElementById("input-drop-shadow-x").value
-                let valueY = document.getElementById("input-drop-shadow-y").value
-                let valueR = document.getElementById("input-drop-shadow-r").value
-                let valueC = document.getElementById("input-drop-shadow-c").value
-                filters.dropShadow = `drop-shadow(${valueX}px ${valueY}px ${valueR}px ${valueC})`
-                apply()
-            }
-
-            function apply() {
-                
-                let img = document.getElementById("img")
-                let filtersString = ''
-                for (e in filters) {
-                    filtersString += ` ${filters[e]}`
-                }
-                console.log(filtersString)
-                Object.assign(document.querySelector('#img').style, {
-                    filter: filtersString
-                })
-            }
-            </script>
     </body>
 </html>
+<style>
+    
+</style>

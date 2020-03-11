@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-color: #7159c1;
+        }
+
+        .container {
+            display: grid;
+            width:100vw;
+            height: 100vh;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 20vh 70vh 10vh;
+            grid-gap: 0px;
+            grid-template-areas: "h h" 
+                                 "m a"
+                                 "f a";
+        }
+
+        .container .main div {
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        div*9
+    </div>
+</body>
+</html>
