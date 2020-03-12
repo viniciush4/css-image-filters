@@ -19,14 +19,13 @@ aside {
 }
 
 footer {
-    background-color: red;
     grid-area: f;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 60vh 10vh 10vh;
+    grid-template-rows: 20vh 40vh 30vh 10vh;
     grid-gap: 0px;
     grid-template-areas: "h" 
                          "a"
@@ -38,14 +37,6 @@ footer {
     display: grid;
 }
 
-.overflow-hidden {
-    overflow: hidden;
-}
-
-.flex {
-    display: flex;
-}
-
 .justify-center {
     justify-self: center;
 }
@@ -54,8 +45,37 @@ footer {
     align-self: center;
 }
 
-.font-pacifico {
+.titulo {
     font-family: 'Pacifico', cursive;
     font-weight: lighter;
     font-size: 48px;
 }
+
+.footer {
+    font-family: 'Bellota', cursive;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.text-red {
+    color: red;
+}
+
+/* .horizontal-scroll-wrapper{
+    display: flex;
+    margin:0;
+    overflow-y:hidden;
+    overflow-x:auto;
+} */
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
+}
+
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}

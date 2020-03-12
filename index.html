@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fdcc746a58.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bellota|Pacifico|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
         <div class="container">
             <header class="grid">
-                <h1 class="justify-center align-center font-pacifico">CSS Image Filters</h1>
+                <h1 class="justify-center align-center titulo">CSS Image Filters</h1>
             </header>
             <aside class="grid">
                 <img 
@@ -17,57 +18,65 @@
                     src="assets/limao.png" 
                 />
             </aside>
-            <main class="flex overflow-hidden">
-                <p>
-                    blur: 
-                    <input type="range" value="0" min="0" max="25" id="input-blur" oninput="blurFilter()">
-                </p>
-                <p>
-                    brightness: 
-                    <input type="range" value="100" min="0" max="200" id="input-brightness" oninput="brightnessFilter()">
-                </p>
-                <p>
-                    contrast: 
-                    <input type="range" value="100" min="0" max="200" id="input-contrast" oninput="contrastFilter()">
-                </p>
-                <p>
-                    grayscale: 
-                    <input type="range" value="0" min="0" max="100" id="input-grayscale" oninput="grayscaleFilter()">
-                </p>
-                <p>
-                    invert: 
-                    <input type="range" value="0" min="0" max="100" id="input-invert" oninput="invertFilter()">
-                </p>
-                <p>
-                    opacity: 
-                    <input type="range" value="100" min="0" max="100" id="input-opacity" oninput="opacityFilter()">
-                </p>
-                <p>
-                    saturate: 
-                    <input type="range" value="100" min="0" max="200" id="input-saturate" oninput="saturateFilter()">
-                </p>
-                <p>
-                    sepia: 
-                    <input type="range" value="0" min="0" max="100" id="input-sepia" oninput="sepiaFilter()">
-                </p>
-                <p>
-                    hue-rotate: 
-                    <input type="range" value="0" min="0" max="360" id="input-hue-rotate" oninput="hueRotateFilter()">
-                </p>
-                <p>
-                    drop-shadow: 
-                    x: 
-                    <input type="range" value="0" min="-50" max="50" id="input-drop-shadow-x" oninput="dropShadowFilter()">
-                    y: 
-                    <input type="range" value="0" min="-50" max="50" id="input-drop-shadow-y" oninput="dropShadowFilter()">
-                    radius-blur: 
-                    <input type="range" value="0" min="0" max="50" id="input-drop-shadow-r" oninput="dropShadowFilter()">
-                    color: 
-                    <input type="color" value="#000000" id="input-drop-shadow-c" oninput="dropShadowFilter()">
-                </p>
+            <main class="grid">
+                <div class="justify-center align-center">
+                    <!-- <p> -->
+                    <!-- blur:  -->
+                    <input type="range" orient="vertical" value="0" min="0" max="25" id="input-blur" oninput="blurFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- brightness:  -->
+                    <input type="range" orient="vertical" value="100" min="0" max="200" id="input-brightness" oninput="brightnessFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- contrast:  -->
+                    <input type="range" orient="vertical" value="100" min="0" max="200" id="input-contrast" oninput="contrastFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- grayscale:  -->
+                    <input type="range" orient="vertical" value="0" min="0" max="100" id="input-grayscale" oninput="grayscaleFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- invert:  -->
+                    <input type="range" orient="vertical" value="0" min="0" max="100" id="input-invert" oninput="invertFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- opacity:  -->
+                    <input type="range" orient="vertical" value="100" min="0" max="100" id="input-opacity" oninput="opacityFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- saturate:  -->
+                    <input type="range" orient="vertical" value="100" min="0" max="200" id="input-saturate" oninput="saturateFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- sepia:  -->
+                    <input type="range" orient="vertical" value="0" min="0" max="100" id="input-sepia" oninput="sepiaFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- hue-rotate:  -->
+                    <input type="range" orient="vertical" value="0" min="0" max="360" id="input-hue-rotate" oninput="hueRotateFilter()">
+                <!-- </p>
+                <p> -->
+                    <!-- drop-shadow:  -->
+                    <!-- x:  -->
+                    <input type="range" orient="vertical" value="0" min="-50" max="50" id="input-drop-shadow-x" oninput="dropShadowFilter()">
+                    <!-- y:  -->
+                    <input type="range" orient="vertical" value="0" min="-50" max="50" id="input-drop-shadow-y" oninput="dropShadowFilter()">
+                    <!-- radius-blur:  -->
+                    <input type="range" orient="vertical" value="0" min="0" max="50" id="input-drop-shadow-r" oninput="dropShadowFilter()">
+                    <!-- color:  -->
+                    <input type="color" orient="vertical" value="#000000" id="input-drop-shadow-c" oninput="dropShadowFilter()">
+                <!-- </p> -->
+
+
+
+
+
+                
+                </div>
             </main>
-            <footer class="grid">
-                <span class="justify-center align-center">Vinícius Berger</span>
+            <footer class="grid footer">
+                <span class="justify-center align-center">Made with <i class="fas fa-heart text-red"></i>. Follow me on <a href="https://github.com/viniciush4">Github</a></span>
             </footer>
         </div>
 
